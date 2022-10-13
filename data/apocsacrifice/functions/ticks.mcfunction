@@ -90,7 +90,7 @@ execute if entity @e[type=armor_stand,name="dtimer",scores={timer=701}] run exec
 execute if entity @e[type=armor_stand,name="dtimer",scores={timer=702}] run execute unless entity @e[type=armor_stand,name="rtimer",scores={timer=2}] run execute unless entity @e[type=armor_stand,name="rtimer",scores={timer=1}] run execute at @e[type=armor_stand,name="bspawner"] run teleport @a[scores={deadPlayers=2}] ~ ~ ~
 execute unless entity @e[type=armor_stand,name="rtimer",scores={timer=2}] run execute unless entity @e[type=armor_stand,name="rtimer",scores={timer=1}] run execute if entity @e[type=armor_stand,name="dtimer",scores={timer=700}] run execute at @e[type=armor_stand,name="bspawner"] run playsound minecraft:entity.wither.spawn hostile @a ~ ~ ~ 1 1.5
 
-execute if entity @e[type=armor_stand,name="rtimer",scores={timer=8}] run effect give @a[scores={deadPlayers=3},gamemode=survival] night_vision 999999 3
+execute if entity @e[type=armor_stand,name="rtimer",scores={timer=8}] run execute if entity @e[type=armor_stand,name="dtimer",scores={timer=703}] run effect give @a[scores={deadPlayers=2},gamemode=survival] night_vision 999999 3
 gamemode spectator @a[scores={deadPlayers=3},gamemode=survival]
 scoreboard players set @a[scores={deadPlayers=3}] deadPlayers 2
 
